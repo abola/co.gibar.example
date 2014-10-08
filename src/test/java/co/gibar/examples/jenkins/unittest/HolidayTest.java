@@ -8,14 +8,17 @@ public class HolidayTest {
 	Holiday holiday = new Holiday();
 	
 	@Test public void testFriNotHoliday(){
-		Assert.assertFalse("Fri 不應該是假日", holiday.isHoliday("Fri"));
+		Assert.assertFalse("Fri 不應該是假日", 
+				holiday.isHoliday("Fri"));
 	}
 	
 	@Test public void testSatIsHoliday(){
-		Assert.assertTrue("Sat 應該是假日", holiday.isHoliday("Sat"));
+		Assert.assertTrue("Sat 應該是假日", 
+				holiday.isHoliday("Sat"));
 	}
 	
 	@Test public void testSunIsHoliday(){
-		Assert.assertTrue("Sun 應該是假日", holiday.isHoliday("Sun"));
+		Assert.assertTrue("Sun 應該是假日", 
+				holiday.isHoliday("Sun"));
 	}
 }
