@@ -3,14 +3,12 @@
  */
 package co.gibar.examples.jenkins.matrix;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class JDK7OnlyScript {
 
-	// underscores
-	int jennyPhone = 8_675_309;
-	
-	public Boolean isJennyPhone(int phoneNumber){
-		return jennyPhone == phoneNumber;
-	}
+	Map<String, Integer> generic = new HashMap<>();
 	
 }
