@@ -28,6 +28,16 @@
             </activation>
             <build>
                 <plugins>
+                  <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-compiler-plugin</artifactId>
+                      <version>3.1</version>
+                      <configuration>
+                        <verbose>true</verbose>
+                        <fork>true</fork>
+                        <executable>${JAVA_HOME}/bin/javac</executable>
+                      </configuration>
+                  </plugin>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
