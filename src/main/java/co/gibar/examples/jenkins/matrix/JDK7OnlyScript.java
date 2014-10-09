@@ -13,9 +13,7 @@ public class JDK7OnlyScript extends Thread {
 	Map<String, Integer> generic = new HashMap<>();
 	
 	public JDK7OnlyScript(){
-	    try {	
-	    	new JDK7OnlyScript("JDK8 stop test").start();
-	    } catch (Exception e) {}
+	    new JDK7OnlyScript("JDK8 stop test").start();
 	}
 	
 	public JDK7OnlyScript(String name){
