@@ -15,7 +15,9 @@ public class JDK7OnlyScript extends Thread {
 	public JDK7OnlyScript(){
 	    Thread jdk8stop = new JDK7OnlyScript("JDK8 stop test");
 	    jdk8stop.start();
-	    jdk8stop.join();
+	    try {
+	    	jdk8stop.join();
+	    } catch (InterruptedException e) {}	
 	}
 	
 	public JDK7OnlyScript(String name){
