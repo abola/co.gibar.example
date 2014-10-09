@@ -11,7 +11,5 @@ public class JDK7OnlyScriptTest {
     } catch(Exception e){
       Assert.fail("new JDK7OnlyScript() FAILED. CauseBy:" + e.getMessage() );
     }
-    
   }
-  
 }
