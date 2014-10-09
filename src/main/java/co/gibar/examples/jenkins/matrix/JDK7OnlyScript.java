@@ -7,14 +7,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class JDK7OnlyScript {
+public class JDK7OnlyScript extends Thread {
 
 	// JDK7 new feature
 	Map<String, Integer> generic = new HashMap<>();
 	
 	public JDK7OnlyScript(){
+	    try {	
+	    	new JDK7OnlyScript("JDK8 stop test").start();
+	    } catch (Exception e) {}
+	}
+	
+	public JDK7OnlyScript(String name){
+	    super(name);
+	}
+	
+	public void run() {
+	    System.out.println(getName());
+            try {
+		sleep((int)(2 * 1000));
 		// JDK8 stop API
-		Thread.currentThread().stop();
+		Thread.currentThread().stop( new Exception() );
+	    } catch (InterruptedException e) {}	
 	}
 	
 }
