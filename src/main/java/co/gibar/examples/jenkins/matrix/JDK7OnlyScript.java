@@ -14,6 +14,7 @@ public class JDK7OnlyScript {
 	Map<String, Integer> generic = new HashMap<>();
 	
 	public JDK7OnlyScript(){
+		// http://bugs.java.com/bugdatabase/view_bug.do?bug_id=8021591
 		CopyOnWriteArrayList cp = new CopyOnWriteArrayList();
 		cp.removeAll(  null );
 	}
